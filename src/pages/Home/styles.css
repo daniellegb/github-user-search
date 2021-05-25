@@ -1,0 +1,31 @@
+.home-title {
+    width: 580px;
+    height: 128px;
+    left: 120px;
+    top: 179px;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 64px;
+    letter-spacing: 0.02em;
+    color: #062847;
+    margin-top: 115px;
+    padding-left: 120px;
+}
+
+.home-text {
+    width: 612px;
+    height: 216px;
+    left: 120px;
+    top: 331px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 36px;
+    color: #5a6774;
+    padding-top: 25px;
+    padding-left: 120px;
+}
+
+.text-blue {
+    color: #1890ff;
+}
