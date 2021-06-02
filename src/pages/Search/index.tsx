@@ -1,12 +1,12 @@
-import NavBar from 'core/components/NavBar';
 import BaseForm from './components/BaseForm';
+import BaseResult from './components/BaseResult';
 import './styles.css';
 
 const Search = () => {
     return (
         <>
-            <NavBar />
             <BaseForm />
+            <BaseResult />
         </>
     );
 }

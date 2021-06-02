@@ -1,27 +1,18 @@
 .btn-icon {
     width: 101px;
-height: 40px;
-margin-left: 135px;
-margin-top: 55px;
-
-background: #1890FF;
-border-radius: 4px;
+    height: 40px;
+    background: #1890ff;
+    border-radius: 4px;
 }
 
 .btn-content {
     height: 24px;
-left: 138px;
-right: 1237px;
-
-font-weight: normal;
-font-size: 16px;
-line-height: 24px;
-
-align-items: center;
-text-align: center;
-
-
-color: #FFFFFF;
-
-
+    left: 138px;
+    right: 1237px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
 }

@@ -12,7 +12,9 @@ const Home = () => {
                 <p>Conforme proposto, esta implementação oferece uma busca de usuários do Github.</p>
                 <p>Este design foi adaptado a partir de Ant Design System for Figma, de Mateusz Wierzbicki: <a href="mailto: antforfigma@gmail.com" className="text-blue">antforfigma@gmail.com</a> </p>
             </h2>
-            <ButtonIcon text="Começar" />
+            <div className="btn-position">
+                <ButtonIcon text="Começar" />
+            </div>
         </>
     );
 }
