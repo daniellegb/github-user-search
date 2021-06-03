@@ -7,7 +7,7 @@ const BaseForm = () => {
         <div className="card-search">
             <h4 className="card-text">Encontre um perfil Github</h4>
             <input
-                value={"oi"}
+                value={"Usuário Github"}
                 className="card-form card-form-text"
                 //onChange={}
                 placeholder="Preço do produto"

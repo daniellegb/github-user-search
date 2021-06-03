@@ -6,7 +6,7 @@ const Search = () => {
     return (
         <>
             <BaseForm />
-            <BaseResult />
+            <BaseResult user="daniellegb"/>
         </>
     );
 }

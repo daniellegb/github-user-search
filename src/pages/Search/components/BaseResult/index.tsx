@@ -1,32 +1,60 @@
+import ButtonIcon from 'core/components/ButtonIcon';
 import { makeRequest } from 'core/utils/request';
 import { useEffect, useState } from 'react';
 import { Result } from './../../../../core/types/Result';
 import './styles.css';
 
-const BaseResult = () => {
+type Props = {
+    user: string;
+}
+
+const BaseResult = ({user} : Props) => {
 
     const [result, setResult] = useState<Result>();
 
     useEffect(() => {
-        makeRequest({ url: `/daniellegb` })
+        makeRequest({ url: `/${user}` })
             .then(response => setResult(response.data))
-    }, []);
+    }, [user]);
 
     return (
         <>
-            <div className="card-result">
-                <div>
-                    <img src={result?.avatar_url} alt={result?.login} />
+            <div className="card-result-container">
+                <div className="inner-box1">
+                    <img src={result?.avatar_url} alt={result?.login} className="card-img" />
+                    <div className="button-position">
+                        <ButtonIcon text="Ver perfil"/>
+                        </div>
                 </div>
+                <div className="inner-box2">
+                    <div className="info-align">
+                        <div className="card-result-fragment">
+                            <h2 className="card-fragment-text">
+                                Repositórios públicos: {result?.public_repos}
+                            </h2>
+                        </div>
+                        <div className="card-result-fragment">
+                            <h2 className="card-fragment-text">
+                                Seguidores: {result?.followers}
+                            </h2>
+                        </div>
+                        <div className="card-result-fragment">
+                            <h2 className="card-fragment-text">
+                                Seguindo: {result?.following}
+                            </h2>
+                        </div>
+                    </div>
+                    <p>
+                        <div className="card-box-info">
+                            <h3 className="text-size-color">Informações</h3>
+                            <h3 className="card-result-text card-result">Empresa:  {result?.company} </h3>
+                            <h3 className="card-result-text card-result">Website/Blog: {result?.blog} </h3>
+                            <h3 className="card-result-text card-result">Localidade: {result?.location} </h3>
+                            <h3 className="card-result-text card-result">Membro desde: Membro desde: {result?.created_at} </h3>
+                        </div>
+                    </p>
 
-                <h1>Repositórios públicos: {result?.public_repos}</h1>
-                <h1>Seguidores: {result?.followers}</h1>
-                <h1>Seguindo: {result?.following}</h1>
-                <h2 className="text-blue">Informações</h2>
-                <h1>Empresa: {result?.company} </h1>
-                <h1>Website/Blog: {result?.blog} </h1>
-                <h1>Localidade: {result?.location} </h1>
-                <h1>Membro desde: {result?.created_at} </h1>
+                </div>
             </div>
 
         </>
