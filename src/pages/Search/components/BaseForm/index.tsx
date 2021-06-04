@@ -2,6 +2,7 @@ import './styles.css';
 import ButtonIcon from 'core/components/ButtonIcon';
 import { useState } from 'react';
 import BaseResult from '../BaseResult';
+import WaitingComponent from '../WaitingComponent/Waiting';
 
 const BaseForm = () => {
 
@@ -37,7 +38,7 @@ const BaseForm = () => {
                 </form>
 
             </div>
-            {isRequested ? <BaseResult user={formData} /> : <ButtonIcon text={'oi'} />}
+            {isRequested ? <BaseResult user={formData} /> : <WaitingComponent />}
         </>
     );
 }
