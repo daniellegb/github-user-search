@@ -32,13 +32,16 @@ const BaseResult = ({ user }: Props) => {
         <div className="card-result-container">
             <div className="inner-box1">
                 {isLoading ? <ImageLoader /> :
-                    <img src={result?.avatar_url} alt={result?.login} className="card-img" />
+                    <>
+                        <img src={result?.avatar_url} alt={result?.login} className="card-img" />
+
+                        <div className="button-position">
+                            <Link to={{ pathname: `${URL_GIT}/${user}` }} target="_blank">
+                                <ButtonIcon text="Ver perfil" />
+                            </Link>
+                        </div>
+                    </>
                 }
-                <div className="button-position">
-                    <Link to={{ pathname: `${URL_GIT}/${user}` }} target="_blank">
-                        <ButtonIcon text="Ver perfil" />
-                    </Link>
-                </div>
             </div>
             {isLoading ?
                 <div className="loaderInfoPosition"><InfoLoader /></div>
