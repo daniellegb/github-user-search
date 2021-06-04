@@ -1,4 +1,5 @@
 import ButtonIcon from 'core/components/ButtonIcon';
+import Footer from 'core/components/Footer';
 import { Link } from 'react-router-dom';
 import './styles.css';
 
@@ -18,6 +19,7 @@ const Home = () => {
                     <ButtonIcon text="Começar" />
                 </Link>
             </div>
+            <Footer />
         </>
     );
 }

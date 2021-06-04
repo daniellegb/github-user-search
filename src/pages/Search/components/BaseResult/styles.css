@@ -3,7 +3,7 @@
     height: 390px;
     background: #f5f5f5;
     border-radius: 8px;
-    margin: 64px 100px 515px 90px;
+    margin: 64px 100px 110px 90px;
     display: flex;
 }
 
@@ -20,7 +20,8 @@
     width: fit-content;
     height: fit-content;
     border-radius: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    margin-right: 8px;
 }
 
 .card-result {
@@ -40,7 +41,7 @@
 .card-result-text {
     font-size: 16px;
     color: #737373;
-    font-weight: bold;
+    font-weight: normal;
     padding: 8px 10px 8px 10px;
 }
 

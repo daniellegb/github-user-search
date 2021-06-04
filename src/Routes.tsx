@@ -3,7 +3,6 @@ import NavBar from "core/components/NavBar";
 import Home from "pages/Home";
 import Search from "pages/Search";
 
-
 const Routes = () => (
     <BrowserRouter>
             <NavBar />

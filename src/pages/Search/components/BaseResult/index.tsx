@@ -1,5 +1,6 @@
 import ButtonIcon from 'core/components/ButtonIcon';
 import { URL_GIT, makeRequest } from 'core/utils/request';
+import dayjs from 'dayjs';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ImageLoader from '../Loaders/ImageLoader';
@@ -39,9 +40,9 @@ const BaseResult = ({ user }: Props) => {
                     </Link>
                 </div>
             </div>
-            {isLoading ? 
-            <div className="loaderInfoPosition"><InfoLoader /></div>
-            :
+            {isLoading ?
+                <div className="loaderInfoPosition"><InfoLoader /></div>
+                :
                 <>
 
                     <div className="inner-box2">
@@ -62,15 +63,17 @@ const BaseResult = ({ user }: Props) => {
                                 </h2>
                             </div>
                         </div>
-                        <p>
-                            <div className="card-box-info">
-                                <h3 className="text-size-color">Informações</h3>
-                                <h3 className="card-result-text card-result">Empresa:  {result?.company} </h3>
-                                <h3 className="card-result-text card-result">Website/Blog: {result?.blog} </h3>
-                                <h3 className="card-result-text card-result">Localidade: {result?.location} </h3>
-                                <h3 className="card-result-text card-result">Membro desde: Membro desde: {result?.created_at} </h3>
-                            </div>
-                        </p>
+
+                        <div className="card-box-info">
+                            <h3 className="text-size-color">Informações</h3>
+                            <h3 className="card-result-text card-result"><strong>Empresa: </strong>  {result?.company} </h3>
+                            <h3 className="card-result-text card-result"><strong>Website/Blog: </strong> {result?.blog} </h3>
+                            <h3 className="card-result-text card-result"><strong>Localidade: </strong> {result?.location} </h3>
+                            <h3 className="card-result-text card-result">
+                                <strong>Membro desde: </strong> {dayjs(result?.created_at).format('DD/MM/YYYY')}
+                            </h3>
+                        </div>
+
 
                     </div>
                 </>
