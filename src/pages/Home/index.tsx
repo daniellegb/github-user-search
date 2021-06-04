@@ -1,4 +1,5 @@
 import ButtonIcon from 'core/components/ButtonIcon';
+import { Link } from 'react-router-dom';
 import './styles.css';
 
 const Home = () => {
@@ -13,7 +14,9 @@ const Home = () => {
                 <p>Este design foi adaptado a partir de Ant Design System for Figma, de Mateusz Wierzbicki: <a href="mailto: antforfigma@gmail.com" className="text-blue">antforfigma@gmail.com</a> </p>
             </h2>
             <div className="btn-position">
-                <ButtonIcon text="Começar" />
+                <Link to="/search">
+                    <ButtonIcon text="Começar" />
+                </Link>
             </div>
         </>
     );
